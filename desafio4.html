@@ -55,7 +55,7 @@
 
                         var media_regular = (n1 + n2) / 2;
 
-                        if ( media_regular > 8 ){
+                        if ( media_regular >= 8 ){
                             res.innerHTML = `Sua média foi: ${media_regular}. Você já está aprovado, não precisa fazer a Avaliação Final (AF)!<br>`;
                         } else if ( media_regular >= 4 && media_regular < 8){
                             let AF = (5*2)-media_regular;
