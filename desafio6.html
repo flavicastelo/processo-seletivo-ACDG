@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@0;1&family=Water+Brush&display=swap" rel="stylesheet">
+
+    <title>PROCESSO SELETIVO - ACDG</title>
+</head>
+<body>
+
+    <header>
+
+        <div>
+            <h3 class="logo">FC</h3>
+        </div>
+
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/flavicastelo/">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/flavianacastelo/">LinkedIn</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:flavicastelocc@gmail.com">E-mail</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/85986189096">Whatsapp</a>
+            </li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <h1>DESAFIO 06</h1>
+                <p class="descricao-desafio">Dado a entrada de dois vetores, soma cada valor de um com o valor do outro.</p>
+                <p class="sub-descricao">OBS: Entre com dois Arrays do mesmo tamanho e com os valores separados por vírgula, como no exemplo.</p>
+                <input type="text" id="primeiro_array" placeholder="Ex: 1,2,3,4,5">
+                <input type="text" id="segundo_array" placeholder="Ex: 1,2,3,4,5"><br>
+                <input type="button" value="enviar" onclick="somaArray()">   
+                <div id="res"></div> 
+
+                <script>                      
+                    function somaArray(){
+                        //pega os valores do primeiro array
+                        var primeiro_array = window.document.getElementById('primeiro_array').value;
+                         //converte em array de numeros
+                        var primeiro_int = JSON.parse("[" + primeiro_array + "]");
+                         //pega os valores do segundo array
+                         var segundo_array = window.document.getElementById('segundo_array').value;
+                         //converte em array de numeros
+                        var segundo_int = JSON.parse("[" + segundo_array + "]");
+
+                        var arraySoma = [];
+                        for (let i = 0; i<= primeiro_int.length - 1; i++) {
+                            arraySoma[i] = primeiro_int[i] + segundo_int[i];
+                        }
+
+                        res.innerHTML = (`a soma: [${primeiro_int}] + [${segundo_int}] = [${arraySoma}]`);                        
+                    }                   
+                </script>
+            </div>      
+                   
+            <div class="container-botao">
+                <button class="botao"><a href="index.html">Voltar ao início</a></button>               
+            </div>
+        </section>
+
+    </main>
+  
+</body>
+</html>

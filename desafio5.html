@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@0;1&family=Water+Brush&display=swap" rel="stylesheet">
+
+    <title>PROCESSO SELETIVO - ACDG</title>
+</head>
+<body>
+
+    <header>
+
+        <div>
+            <h3 class="logo">FC</h3>
+        </div>
+
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/flavicastelo/">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/flavianacastelo/">LinkedIn</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:flavicastelocc@gmail.com">E-mail</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/85986189096">Whatsapp</a>
+            </li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <h1>DESAFIO 05</h1>
+                <p class="descricao-desafio">Dado um conjunto de números, retorna o inverso de cada um. Cada positivo torna-se negativo, e os negativos tornam-se positivos.</p>
+                <p class="sub-descricao">OBS: Entre com os valores separados por vírgula como no exemplo.</p>
+                <input type="text" id="array_original" placeholder="Ex: 1,2,3,4,5">
+                <input type="button" value="enviar" onclick="inverteNumeros()">   
+                <div id="res"></div>  
+               
+                <script>                     
+                    function inverteNumeros(){
+                        //pega os valores digitados
+                        var array_original = window.document.getElementById('array_original').value;
+                         //converte em array de numeros
+                        var array_num = JSON.parse("[" + array_original + "]");                                           
+                        
+                        var array_invertido=[];
+                        
+                        for (let i = 0; i<= array_num.length - 1; i++) {
+                            array_invertido[i] = array_num[i] * (-1);
+                        }
+                        
+                        res.innerHTML = (`array original: [${array_num}] <br>array invertido: [${array_invertido}]`);                       
+                    }
+                </script>
+
+            </div>      
+                   
+            <div class="container-botao">
+                <button class="botao"><a href="index.html">Voltar ao início</a></button>
+                <button class="botao"><a href="desafio6.html">Próximo desafio</a></button>
+                <p id="str_saida"></p>
+            </div>
+        </section>
+
+    </main>
+  
+</body>
+</html>

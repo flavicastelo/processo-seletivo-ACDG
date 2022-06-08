@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@0;1&family=Water+Brush&display=swap" rel="stylesheet">
+
+    <title>PROCESSO SELETIVO - ACDG</title>
+</head>
+<body>
+
+    <header>
+
+        <div>
+            <h3 class="logo">FC</h3>
+        </div>
+
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/flavicastelo/">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/flavianacastelo/">LinkedIn</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:flavicastelocc@gmail.com">E-mail</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/85986189096">Whatsapp</a>
+            </li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <h1>DESAFIO 04</h1>
+                <p class="descricao-desafio">Calcula a média, dado as notas da primeira e segunda avaliação e retorna se foi aprovado ou não, e se precisará fazer a terceira prova e qual nota deverá tirar na avaliação final.</p>
+                <input type="number" name="nota1" id="nota1" placeholder="Digite a 1ª nota"><br>
+                <input type="number" name="nota2" id="nota2" placeholder="Digite a 2ª nota"><br>
+                <input type="button" value="enviar" onclick="calcularMedia()">   
+                <div id="res"></div>   
+               
+                <script> 
+                                    
+                    function calcularMedia(){
+                        var nota1 = window.document.getElementById('nota1');
+                        var n1 = Number(nota1.value);
+                        var nota2 = window.document.getElementById('nota2');
+                        var n2 = Number(nota2.value);
+
+                        var media_regular = (n1 + n2) / 2;
+
+                        if ( media_regular > 8 ){
+                            res.innerHTML = `Sua média foi: ${media_regular}. Você já está aprovado, não precisa fazer a Avaliação Final (AF)!<br>`;
+                        } else if ( media_regular >= 4 && media_regular < 8){
+                            let AF = (5*2)-media_regular;
+                            res.innerHTML = (`Sua média foi: ${media_regular}. Você precisará fazer a Avaliação Final e precisará tirar no mínimo ${AF}`);
+                        } else 
+                        res.innerHTML = (`Sua média foi: ${media_regular}. Você está reprovado!`);
+                        
+                    }
+                </script>
+
+            </div>      
+                   
+            <div class="container-botao">
+                <button class="botao"><a href="index.html">Voltar ao início</a></button>
+                <button class="botao"><a href="desafio5.html">Próximo desafio</a></button>
+                <p id="str_saida"></p>
+            </div>
+        </section>
+
+    </main>
+  
+</body>
+</html>

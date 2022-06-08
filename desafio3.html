@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@0;1&family=Water+Brush&display=swap" rel="stylesheet">
+
+    <title>PROCESSO SELETIVO - ACDG</title>
+</head>
+<body>
+
+    <header>
+
+        <div>
+            <h3 class="logo">FC</h3>
+        </div>
+
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/flavicastelo/">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/flavianacastelo/">LinkedIn</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:flavicastelocc@gmail.com">E-mail</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/85986189096">Whatsapp</a>
+            </li>
+        </ul>
+
+    </header>
+    <main>
+        <section class="container">
+            <div>
+                <h1>DESAFIO 03</h1>
+                <p class="descricao-desafio">Dado um numero de balas e uma quantidade de dragões, sabendo que o herói precisa de 2 balas para ser derrotar cada dragão, retorna o numero de balas que restou, a quantidade de dragões que foram abatidos e se o herói irá sobreviver. </p>
+                <input type="number" name="balas" id="balas" placeholder="Digite o número de balas"><br>
+                <input type="number" name="dragoes" id="dragoes" placeholder="Digite o número de dragoes"><br>
+                <input type="button" value="enviar" onclick="matarDragoes()">   
+                <div id="res"></div>   
+
+                <script> 
+                    
+
+                    function matarDragoes() {
+                        var balas = window.document.getElementById('balas');
+                        var dragoes = window.document.getElementById('dragoes');
+
+                        var nBalas = Number(balas.value);
+                        var nDragoes = Number(dragoes.value);
+                        var balasRes = nBalas - (nDragoes*2)
+                        if (nBalas >= nDragoes * 2){
+                            
+                            res.innerHTML = `Restaram ${balasRes} balas <br> Foram abatidos ${nDragoes} dragões <br>O herói sobreviveu!`;                            
+                        } else 
+                        res.innerHTML = `Faltaram ${Math.abs(balasRes)} balas <br> Foram abatidos ${parseInt(nBalas/2)} dragões <br>O herói Não sobreviveu!`; 
+                    }
+                    // matarDragoes(balas, dragoes);
+
+                </script>
+
+            </div>      
+                   
+            <div class="container-botao">
+                <button class="botao"><a href="index.html">Voltar ao início</a></button>
+                <button class="botao"><a href="desafio4.html">Próximo desafio</a></button>
+                <p id="str_saida"></p>
+            </div>
+        </section>
+
+    </main>
+  
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@0;1&family=Water+Brush&display=swap" rel="stylesheet">
+
+    <title>PROCESSO SELETIVO - ACDG</title>
+</head>
+<body>
+
+    <header>
+        <div>
+            <h3 class="logo">FC</h3>
+        </div>
+
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/flavicastelo/">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://linkedin.com/in/flavianacastelo/">LinkedIn</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:flavicastelocc@gmail.com">E-mail</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/85986189096">Whatsapp</a>
+            </li>
+        </ul>
+
+    </header>
+
+    <main>
+        <section class="container">
+            <div>
+                <h1>DESAFIO 02</h1>
+                <p class="descricao-desafio">Dado uma entrada de uma string, inverte essa string.</p>
+                <input type="text" name="string_entrada" id="string_entrada" placeholder="Digite uma palavra">
+                <input type="button" value="enviar" onclick="inverteString()">   
+                <div id="res"></div>      
+            </div>      
+                   
+            <div class="container-botao">
+                <button class="botao"><a href="index.html">Voltar ao início</a></button>
+                <button class="botao"><a href="desafio3.html">Próximo desafio</a></button>
+                <p id="str_saida"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>        
+                      
+        function inverteString() {
+            var string_entrada = window.document.getElementById('string_entrada');
+            var str_entrada = String(string_entrada.value);
+            
+            var string_invertida = "";
+            for (let i = str_entrada.length - 1; i >= 0; i--) {
+                string_invertida += str_entrada[i];
+            }
+            
+            res.innerHTML = `Entrada: ${str_entrada}<br>  Saída: ${string_invertida}`;                     
+        }        
+
+    </script>
+  
+</body>
+</html>
